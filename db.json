@@ -1,0 +1,49 @@
+{
+  "optica": [
+    {
+      "id": 2,
+      "Nom": "mourad",
+      "Prenom": "elmer",
+      "Age": 26,
+      "Nt": "+216",
+      "Date": "10/02/2023",
+      "Vslod": "0.2",
+      "Vslog": "02",
+      "Tvl": "01",
+      "Vspod": "0.84",
+      "Vspog": "0.5",
+      "Tvp": "0.6",
+      "Tlog": "0.2",
+      "Tlod": "0.2",
+      "Tl": "0.5",
+      "Obs": "good",
+      "Diametre": "10"
+    },
+    {
+      "Nom": "mahdi",
+      "Prenom": "hero",
+      "Age": "25",
+      "Nt": "+216",
+      "Date": "10/04/2023",
+      "Vslod": "0.5",
+      "Vslog": "0.7",
+      "Tvl": "0.4",
+      "Vspod": "0.2",
+      "Vspog": "0.2",
+      "Tvp": "0.2",
+      "Tlog": "0.2",
+      "Tlod": "0.2",
+      "Tl": "0.2",
+      "Obs": "good",
+      "Diametre": "10",
+      "id": 3
+    }
+  ],
+  "user": [
+    {
+      "id": 0,
+      "name": "Optica",
+      "adresse": "شارع المانيا حي الرياض 5 سوسة"
+    }
+  ]
+}

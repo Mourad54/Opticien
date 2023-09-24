@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <mat-drawer-container   class="example-container">
+    <mat-drawer style="background-color: rgb(0, 0, 49);" #drawer >
+        
+          <h2 *ngFor="let b of d" style="color: white;margin-bottom: 150px;margin-left: 10%;margin-top: 10px;"><svg height="45px" width="45px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M511.58,252.219c-0.403-1.756-0.807-2.737-1.17-3.647c-0.727-1.7-1.424-2.982-2.239-4.437 c-3.006-5.228-7.831-12.308-14.444-21.216c-9.872-13.273-23.469-30.09-38.871-46.686c-15.417-16.596-32.518-32.938-49.93-45.279 c-24.624-17.426-48.569-30.976-73.091-40.184C307.33,81.555,282.246,76.77,256,76.785c-26.246-0.015-51.33,4.77-75.836,13.986 c-24.53,9.207-48.466,22.758-73.09,40.176c-25.899,18.407-51.401,45.729-71.098,69.459c-9.825,11.866-18.106,22.798-24.078,31.325 c-2.999,4.272-5.403,7.926-7.254,11.011c-0.933,1.567-1.716,2.966-2.468,4.533c-0.38,0.799-0.744,1.622-1.147,2.777 c-0.198,0.585-0.412,1.265-0.609,2.167c-0.19,0.91-0.412,2.033-0.42,3.781c0.008,1.741,0.229,2.872,0.42,3.781 c0.395,1.756,0.807,2.729,1.17,3.646c0.728,1.701,1.424,2.983,2.239,4.43c3.006,5.229,7.831,12.316,14.444,21.223 c9.864,13.274,23.469,30.098,38.871,46.695c15.417,16.596,32.519,32.93,49.93,45.27c24.624,17.426,48.561,30.969,73.09,40.184 c24.506,9.208,49.59,14.001,75.836,13.985c26.246,0.016,51.33-4.777,75.836-13.985c24.522-9.216,48.466-22.758,73.091-40.176 c25.898-18.408,51.401-45.729,71.098-69.46c9.824-11.865,18.106-22.797,24.078-31.325c2.998-4.279,5.402-7.926,7.254-11.019 c0.934-1.566,1.717-2.966,2.468-4.525c0.372-0.799,0.744-1.622,1.147-2.785c0.198-0.585,0.412-1.257,0.609-2.159 c0.19-0.91,0.412-2.04,0.42-3.781C511.992,254.252,511.771,253.129,511.58,252.219z M256,377.487 c-67.103,0-121.486-54.392-121.486-121.486c0-67.079,54.383-121.486,121.486-121.486c67.103,0,121.486,54.407,121.486,121.486 C377.486,323.095,323.103,377.487,256,377.487z"></path> <path class="st0" d="M286.415,250.384c-6.376,1.171-12.902-1.092-17.166-5.965c-4.271-4.888-5.648-11.644-3.631-17.814l7.911-24.19 c-5.522-1.804-11.399-2.8-17.53-2.8c-31.15,0-56.392,25.233-56.392,56.384c0,31.15,25.242,56.4,56.392,56.4 c31.151,0,56.392-25.25,56.392-56.4c0-3.496-0.364-6.914-0.973-10.235L286.415,250.384z"></path> </g> </g></svg> {{b.name}}</h2> 
+          <button data-bs-toggle="modal" data-bs-target="#exampleModal2"  style="margin-bottom: 50px; background-color: white;margin-left: 25%;" mat-raised-button><svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>profile_round [#1342]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -2159.000000)" fill="#1651b1"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M100.562548,2016.99998 L87.4381713,2016.99998 C86.7317804,2016.99998 86.2101535,2016.30298 86.4765813,2015.66198 C87.7127655,2012.69798 90.6169306,2010.99998 93.9998492,2010.99998 C97.3837885,2010.99998 100.287954,2012.69798 101.524138,2015.66198 C101.790566,2016.30298 101.268939,2016.99998 100.562548,2016.99998 M89.9166645,2004.99998 C89.9166645,2002.79398 91.7489936,2000.99998 93.9998492,2000.99998 C96.2517256,2000.99998 98.0830339,2002.79398 98.0830339,2004.99998 C98.0830339,2007.20598 96.2517256,2008.99998 93.9998492,2008.99998 C91.7489936,2008.99998 89.9166645,2007.20598 89.9166645,2004.99998 M103.955674,2016.63598 C103.213556,2013.27698 100.892265,2010.79798 97.837022,2009.67298 C99.4560048,2008.39598 100.400241,2006.33098 100.053171,2004.06998 C99.6509769,2001.44698 97.4235996,1999.34798 94.7348224,1999.04198 C91.0232075,1998.61898 87.8750721,2001.44898 87.8750721,2004.99998 C87.8750721,2006.88998 88.7692896,2008.57398 90.1636971,2009.67298 C87.1074334,2010.79798 84.7871636,2013.27698 84.044024,2016.63598 C83.7745338,2017.85698 84.7789973,2018.99998 86.0539717,2018.99998 L101.945727,2018.99998 C103.221722,2018.99998 104.226185,2017.85698 103.955674,2016.63598" id="profile_round-[#1342]"> </path> </g> </g> </g> </g></svg> |Clients</button><br>
+          <button data-bs-toggle="modal" data-bs-target="#exampleModalToggle"  style="margin-bottom: 140px;background-color: white;margin-left: 25%;" mat-raised-button><svg width="24px" height="24px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M897.28 597.76l-74.24-53.76c1.28-10.24 1.28-21.76 1.28-32 0-11.52 0-21.76-1.28-32l74.24-53.76c12.8-7.68 16.64-23.04 8.96-34.56l-90.88-154.88c-7.68-12.8-23.04-16.64-35.84-8.96l-84.48 37.12c-17.92-12.8-37.12-23.04-57.6-32l-7.68-92.16c0-14.08-11.52-25.6-25.6-25.6H422.4c-14.08 0-25.6 11.52-25.6 25.6l-8.96 90.88c-20.48 8.96-39.68 19.2-57.6 32l-84.48-37.12c-12.8-7.68-28.16-2.56-35.84 8.96l-89.6 156.16c-7.68 12.8-2.56 28.16 8.96 34.56l74.24 53.76c-1.28 10.24-1.28 21.76-1.28 32s0 21.76 1.28 32l-74.24 53.76c-12.8 7.68-16.64 23.04-8.96 34.56l90.88 154.88c7.68 12.8 23.04 16.64 35.84 8.96l84.48-37.12c17.92 12.8 37.12 23.04 57.6 32L396.8 883.2c0 14.08 11.52 25.6 25.6 25.6h181.76c14.08 0 25.6-11.52 25.6-25.6l8.96-90.88c20.48-8.96 39.68-19.2 57.6-32l84.48 37.12c12.8 7.68 28.16 2.56 35.84-8.96l90.88-154.88c6.4-12.8 1.28-28.16-10.24-35.84z m-384 65.28c-84.48 0-153.6-67.84-153.6-151.04s69.12-151.04 153.6-151.04 153.6 67.84 153.6 151.04-69.12 151.04-153.6 151.04z" fill="#1651b1"></path><path d="M604.16 921.6H422.4c-20.48 0-38.4-16.64-38.4-37.12l-8.96-81.92c-16.64-7.68-32-16.64-46.08-26.88l-76.8 34.56c-17.92 10.24-42.24 3.84-52.48-14.08L108.8 638.72c-5.12-8.96-6.4-19.2-3.84-29.44 2.56-10.24 8.96-17.92 17.92-23.04l67.84-48.64c-1.28-8.96-1.28-17.92-1.28-26.88s0-17.92 1.28-26.88L122.88 435.2c-8.96-5.12-15.36-12.8-17.92-23.04-2.56-10.24-1.28-20.48 3.84-29.44l90.88-154.88c10.24-17.92 33.28-24.32 52.48-14.08l76.8 34.56c14.08-10.24 30.72-19.2 46.08-26.88l8.96-81.92C384 119.04 400.64 102.4 422.4 102.4h181.76c20.48 0 38.4 16.64 38.4 37.12l8.96 81.92c16.64 7.68 32 16.64 46.08 26.88l76.8-34.56c17.92-10.24 42.24-3.84 52.48 14.08l90.88 154.88c5.12 8.96 6.4 19.2 3.84 29.44-2.56 10.24-8.96 17.92-17.92 23.04l-67.84 48.64c1.28 8.96 1.28 17.92 1.28 26.88 0 8.96 0 17.92-1.28 26.88l67.84 48.64c8.96 5.12 15.36 12.8 17.92 23.04 2.56 10.24 1.28 20.48-3.84 29.44L826.88 793.6c-10.24 17.92-33.28 24.32-52.48 14.08l-76.8-34.56c-14.08 10.24-30.72 19.2-46.08 26.88l-8.96 81.92c0 23.04-17.92 39.68-38.4 39.68zM330.24 747.52c2.56 0 5.12 1.28 7.68 2.56 16.64 12.8 35.84 23.04 55.04 30.72 3.84 1.28 7.68 6.4 7.68 10.24l8.96 90.88v1.28c0 7.68 6.4 12.8 12.8 12.8h181.76c7.68 0 12.8-5.12 12.8-12.8v-1.28l8.96-90.88c0-5.12 3.84-8.96 7.68-10.24 19.2-8.96 37.12-19.2 55.04-30.72 3.84-2.56 8.96-2.56 12.8-1.28l84.48 37.12h1.28c6.4 3.84 14.08 1.28 17.92-5.12L896 625.92c1.28-2.56 2.56-6.4 1.28-8.96-1.28-3.84-2.56-6.4-6.4-7.68 0 0-1.28 0-1.28-1.28l-74.24-53.76c-3.84-2.56-6.4-7.68-5.12-11.52 1.28-10.24 1.28-20.48 1.28-30.72 0-10.24 0-20.48-1.28-30.72 0-5.12 1.28-8.96 5.12-11.52l74.24-53.76s1.28 0 1.28-1.28c2.56-1.28 5.12-5.12 6.4-7.68 1.28-3.84 0-6.4-1.28-8.96L805.12 243.2c-3.84-6.4-11.52-7.68-17.92-5.12h-1.28l-84.48 37.12c-3.84 1.28-8.96 1.28-12.8-1.28-16.64-12.8-35.84-23.04-55.04-30.72-3.84-1.28-7.68-6.4-7.68-10.24l-8.96-90.88V140.8c0-7.68-6.4-12.8-12.8-12.8H422.4c-7.68 0-12.8 5.12-12.8 12.8v1.28l-8.96 90.88c0 5.12-3.84 8.96-7.68 10.24-19.2 8.96-37.12 19.2-55.04 30.72-3.84 2.56-8.96 2.56-12.8 1.28l-84.48-37.12h-1.28c-6.4-3.84-14.08-1.28-17.92 5.12l-90.88 154.88c-1.28 2.56-2.56 6.4-1.28 8.96 1.28 3.84 2.56 6.4 6.4 7.68 0 0 1.28 0 1.28 1.28l74.24 53.76c3.84 2.56 6.4 7.68 5.12 11.52-1.28 10.24-1.28 20.48-1.28 30.72s0 20.48 1.28 30.72c0 5.12-1.28 8.96-5.12 11.52l-74.24 53.76s-1.28 0-1.28 1.28c-2.56 1.28-5.12 5.12-6.4 7.68-1.28 3.84 0 6.4 1.28 8.96L221.44 780.8c3.84 6.4 11.52 7.68 17.92 5.12h1.28l84.48-37.12c1.28-1.28 2.56-1.28 5.12-1.28z m183.04-71.68c-92.16 0-166.4-74.24-166.4-163.84s74.24-163.84 166.4-163.84 166.4 74.24 166.4 163.84-75.52 163.84-166.4 163.84z m0-302.08c-78.08 0-140.8 62.72-140.8 138.24 0 76.8 62.72 138.24 140.8 138.24s140.8-62.72 140.8-138.24c0-76.8-64-138.24-140.8-138.24z" fill="#231C1C"></path><path d="M513.28 332.8C413.44 332.8 332.8 413.44 332.8 512s80.64 179.2 180.48 179.2 180.48-80.64 180.48-179.2-81.92-179.2-180.48-179.2z m0 281.6c-57.6 0-103.68-46.08-103.68-102.4s46.08-102.4 103.68-102.4 103.68 46.08 103.68 102.4-47.36 102.4-103.68 102.4z" fill="#E1E0A6"></path><path d="M513.28 704C407.04 704 320 618.24 320 512s87.04-192 193.28-192 193.28 85.76 193.28 192c-1.28 106.24-87.04 192-193.28 192z m0-358.4C421.12 345.6 345.6 419.84 345.6 512s75.52 166.4 167.68 166.4c92.16 0 167.68-74.24 167.68-166.4-1.28-92.16-75.52-166.4-167.68-166.4z m0 281.6c-64 0-116.48-51.2-116.48-115.2s52.48-115.2 116.48-115.2 116.48 51.2 116.48 115.2-52.48 115.2-116.48 115.2z m0-204.8c-49.92 0-90.88 39.68-90.88 89.6s40.96 89.6 90.88 89.6c49.92 0 90.88-39.68 90.88-89.6s-40.96-89.6-90.88-89.6z" fill="#231C1C"></path></g></svg> |Setting</button><br>
+          
+          
+          <button routerLink="" style="margin-left: 80%;background-color: transparent;border: none;cursor: pointer;"><svg fill="#ffffff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M62.666,32.316L57.758,21.53c-0.457-1.007-1.646-1.449-2.648-0.992c-1.006,0.457-1.45,1.644-0.992,2.648l3.365,7.397 H44.481c-1.104,0-2,0.896-2,2s0.896,2,2,2h13.69l-4.055,8.912c-0.458,1.004-0.014,2.191,0.992,2.648 c0.269,0.121,0.55,0.18,0.827,0.18c0.76,0,1.486-0.436,1.821-1.172l4.939-10.855c0.104-0.196,0.172-0.407,0.206-0.625 C62.988,33.207,62.901,32.726,62.666,32.316z"></path> <path d="M51.583,47.577c-1.104,0-2,0.895-2,2v8.006h-11V15.269c0-1.722-0.81-3.25-2.445-3.795L24.536,7.583h25.047v9.994 c0,1.104,0.896,2,2,2s2-0.896,2-2v-12c0-1.104,0.003-1.994-1.102-1.994H12.609l-0.325-0.109c-0.413-0.138-0.694-0.205-1.119-0.205 c-0.829,0-1.94,0.258-2.63,0.755C7.492,4.776,6.583,5.983,6.583,7.269v47.572c0,1.721,1.393,3.25,3.026,3.795l24.146,8 c0.413,0.137,0.913,0.205,1.337,0.205c0.83,0,1.395-0.258,2.084-0.756c1.043-0.752,1.407-1.959,1.407-3.244v-1.258h13.898 c1.104,0,1.102-0.902,1.102-2.006v-10C53.583,48.472,52.688,47.577,51.583,47.577z M34.583,62.841l-24-8V7.583V7.504L10.8,7.345 l23.783,7.924V62.841z"></path> <path d="M30.583,47.577c0.553,0,1-0.447,1-1v-6c0-0.553-0.447-1-1-1s-1,0.447-1,1v6C29.583,47.13,30.03,47.577,30.583,47.577z"></path> </g> </g></svg></button>
+        
+    
+    
+    
+    
+    
+    
+    </mat-drawer>
+    <mat-drawer-content>
+        <button style="margin-bottom: 10px;"  (click)="drawer.toggle()" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <section>
+            <div class="example-button-row">
+             
+              
+              <button mat-raised-button data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter</button>
+              <button mat-raised-button color="primary" type="submit" (click)="DeleteAll()">Supprimer Tous </button>
+              <button mat-raised-button color="accent" (click)="exportexcel()">Export To Excel</button>
+
+            </div>
+          </section>
+
+
+
+
+          <table   id="customers">
+            <tr>
+              <th>Action</th>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Age</th>
+              <th>N°T</th>
+              <th>Date</th>
+              <th>VSL OD</th>
+              <th>VSL OG</th>
+              <th>TVL</th>
+              <th>VSP OD</th>
+              <th>VSP OG</th>
+              <th>TVP</th>
+              <th>TLOG</th>
+              <th>TLOD</th>
+              <th>TL</th>
+              <th>OBS</th>
+              <th>Diamètre</th>
+            </tr>
+            <tr *ngFor="let a of data  | paginate
+            : {
+              itemsPerPage: tableSize,
+              currentPage: page,
+              totalItems: count
+              };
+          let i = index"  >
+              <td>
+                <button  style="border: none;background-color: transparent;"  (click)="Deleteid(a)"><svg width="19px" height="20px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M724.3 198H296.1l54.1-146.6h320z" fill="#FAFCFB"></path><path d="M724.3 216.5H296.1c-6.1 0-11.7-3-15.2-7.9-3.5-5-4.3-11.3-2.2-17L332.8 45c2.7-7.3 9.6-12.1 17.4-12.1h320c7.7 0 14.7 4.8 17.4 12.1l54.1 146.6c2.1 5.7 1.3 12-2.2 17-3.5 4.9-9.2 7.9-15.2 7.9z m-401.6-37h375.1L657.3 69.9H363.1l-40.4 109.6z" fill="#0F0F0F"></path><path d="M664.3 981.6H339.7c-54.2 0-98.5-43.3-99.6-97.5L223.7 235h572.9l-32.8 651.4c-2.3 53.2-46.1 95.2-99.5 95.2z" fill="#9DC6AF"></path><path d="M664.3 995H339.7c-29.7 0-57.8-11.4-79-32.2-21.2-20.8-33.3-48.6-34-78.3L210 221.6h600.7L777.2 887c-2.6 60.5-52.2 108-112.9 108zM237.4 248.3l16 635.5c0.5 22.7 9.7 44 25.9 59.8 16.2 15.9 37.7 24.6 60.4 24.6h324.6c46.3 0 84.2-36.2 86.2-82.5l32.1-637.4H237.4z" fill="#191919"></path><path d="M827.1 239.5H193.3c-22.2 0-40.4-18.2-40.4-40.4v-2.2c0-22.2 18.2-40.4 40.4-40.4h633.8c22.2 0 40.4 18.2 40.4 40.4v2.2c0 22.2-18.2 40.4-40.4 40.4z" fill="#D39E33"></path><path d="M826 252.9H194.4c-30.3 0-54.9-24.6-54.9-54.9 0-30.3 24.6-54.9 54.9-54.9H826c30.3 0 54.9 24.6 54.9 54.9s-24.7 54.9-54.9 54.9z m-631.6-83.1c-15.5 0-28.2 12.6-28.2 28.2s12.6 28.2 28.2 28.2H826c15.5 0 28.2-12.6 28.2-28.2 0-15.5-12.6-28.2-28.2-28.2H194.4z" fill="#111111"></path><path d="M354.6 430.3v369.6" fill="#FAFCFB"></path><path d="M354.6 813.3c-7.4 0-13.4-6-13.4-13.4V430.3c0-7.4 6-13.4 13.4-13.4s13.4 6 13.4 13.4v369.6c-0.1 7.4-6 13.4-13.4 13.4z" fill="#0F0F0F"></path><path d="M458.3 430.3v369.6" fill="#FAFCFB"></path><path d="M458.3 813.3c-7.4 0-13.4-6-13.4-13.4V430.3c0-7.4 6-13.4 13.4-13.4s13.4 6 13.4 13.4v369.6c0 7.4-6 13.4-13.4 13.4z" fill="#0F0F0F"></path><path d="M562.1 430.3v369.6" fill="#FAFCFB"></path><path d="M562.1 813.3c-7.4 0-13.4-6-13.4-13.4V430.3c0-7.4 6-13.4 13.4-13.4s13.4 6 13.4 13.4v369.6c-0.1 7.4-6.1 13.4-13.4 13.4z" fill="#0F0F0F"></path><path d="M665.8 430.3v369.6" fill="#FAFCFB"></path><path d="M665.8 813.3c-7.4 0-13.4-6-13.4-13.4V430.3c0-7.4 6-13.4 13.4-13.4s13.4 6 13.4 13.4v369.6c0 7.4-6 13.4-13.4 13.4z" fill="#0F0F0F"></path></g></svg></button>
+                <button style="border: none;background-color: transparent;" (click)="Edit(a)" data-bs-toggle="modal" data-bs-target="#exampleModal0" ><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.15" d="M8 16H12L18 10L14 6L8 12V16Z" fill="#0e127b"></path> <path d="M14 6L8 12V16H12L18 10M14 6L17 3L21 7L18 10M14 6L18 10M10 4L4 4L4 20L20 20V14" stroke="#0e127b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
+                <button style="border:none;background-color: transparent;" (click)="getList(a)"  type="button" value="view"  data-bs-toggle="modal" data-bs-target="#exampleModalV"  data-toggle="modal"><svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12.864 7.37071C13.6338 8.8447 14.0238 10.4874 13.9989 12.1501C13.9739 13.8128 13.5347 15.4431 12.721 16.8933L4 12L12.864 7.37071Z" fill="#000000" fill-opacity="0.24"></path> <path d="M14.5 5.5C11.7189 9.20812 4.64088 11.6272 3.62274 11.9605C3.57878 11.9748 3.57584 12.0335 3.61809 12.0523C4.61914 12.4983 11.7146 15.7146 14.5 18.5" stroke="#0e0c64" stroke-linecap="round"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5498 9.03334C13.862 10.0385 14.0148 11.0902 13.9989 12.1501C13.9845 13.1091 13.8323 14.0572 13.5499 14.9663C12.1066 14.7491 11 13.5037 11 11.9998C11 10.4959 12.1065 9.25054 13.5498 9.03334Z" fill="#0e0c64"></path> <path d="M16.5 12H20.5" stroke="#000000" stroke-opacity="0.24" stroke-linecap="round"></path> <path d="M16.5 9.5L20.5 8" stroke="#000000" stroke-opacity="0.24" stroke-linecap="round"></path> <path d="M16.5 14.5L20.5 16" stroke="#000000" stroke-opacity="0.24" stroke-linecap="round"></path> </g></svg></button>
+                <button style="border:none;background-color: transparent;" (click)="getList(a)"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModalG"   data-toggle="modal"><svg width="23px" height="25px" viewBox="0 0 14 14" role="img" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g transform="matrix(.3 0 0 .3 -.2 .1)"> <path fill="#424242" d="M9 11h30v3H9z"></path> <path fill="#616161" d="M4 25h40v-7c0-2.2-1.8-4-4-4H8c-2.2 0-4 1.8-4 4v7z"></path> <path fill="#424242" d="M8 36h32c2.2 0 4-1.8 4-4v-8H4v8c0 2.2 1.8 4 4 4z"></path> <circle cx="40" cy="18" r="1" fill="#00e676"></circle> <path fill="#90caf9" d="M11 4h26v10H11z"></path> <path fill="#242424" d="M37.5 31h-27c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5h27c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5z"></path> <path fill="#90caf9" d="M11 31h26v11H11z"></path> <path fill="#42a5f5" d="M11 29h26v2H11z"></path> <path fill="#1976d2" d="M16 33h17v2H16zm0 4h13v2H16z"></path> </g> </g></svg></button>
+
+              </td>
+              <td>{{a.Nom}}</td> 
+              <td>{{a.Prenom}}</td> 
+              <td>{{a.Age}}</td> 
+               <td>{{a.Nt}}</td>
+               <td>{{a.Date}}</td>
+              <td> {{a.Vslod}}</td>
+               <td>{{a.Vslog}}</td>
+               <td>{{a.Tvl}}</td>
+               <td>{{a.Vspod}}</td>
+               <td>{{a.Vspog}}</td>
+               <td>{{a.Tvp}}</td>
+               <td>{{a.Tlog}}</td>
+              <td> {{a.Tlod}}</td>
+               <td>{{a.Tl}}</td>
+               <td>{{a.Obs}}</td>
+              <td> {{a.Diametre}}</td>
+              </tr>
+            
+          </table>
+          <div style="border: none;
+          font-size: 13px;
+          min-width: 30px;
+          min-height: 30px;
+          color: #999;
+          line-height: 30px;
+          border-radius: 2px !important;
+          margin-left: 40%;
+          padding: 0 6px; float: right;
+          ">
+          <pagination-controls 
+          previousLabel="Prev"
+          nextLabel="Next"
+          (pageChange)="onTableDataChange($event)"
+        >
+        </pagination-controls>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"><svg width="64px" height="64px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #140f5c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M1080,270a30,30,0,1,1,30-30A30,30,0,0,1,1080,270Zm14-34h-10V226a4,4,0,0,0-8,0v10h-10a4,4,0,0,0,0,8h10v10a4,4,0,0,0,8,0V244h10A4,4,0,0,0,1094,236Z" id="add" transform="translate(-1050 -210)"></path></g></svg></h1>
+        
+        </div>
+        <div class="modal-body">
+          <form  class="row g-4 " style="line-height: 1em;" [formGroup]="formValue">
+            <fieldset class="row g-1">
+              <legend>Information pérsonnelle</legend> 
+            <div class="col-auto">
+              <label>Nom:</label>
+              <input type="text" class="form-control  form-control-sm" formControlName="nom" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="col-auto">
+              <label>Prénom:</label>
+              <input type="text" class="form-control  form-control-sm" formControlName="prenom"   aria-describedby="basic-addon1">
+            </div>
+
+            <div class="col-auto">
+              <label>N° Téléphone:</label>
+              <input type="tel" class="form-control  form-control-sm" formControlName="nt"   aria-describedby="basic-addon1">
+
+            </div>
+
+            <div class="col-auto">
+              <label>Age:</label>
+              <input type="number" class="form-control  form-control-sm" formControlName="age"  aria-describedby="basic-addon1">
+
+            </div>
+
+            <div class="col-4">
+              <label>Date:</label>
+              <input type="date" class="form-control  form-control-sm" formControlName="date"  aria-describedby="basic-addon1">
+
+            </div>
+          
+          
+            
+            <legend>Vision de loin </legend> 
+           
+
+            <div class="col-4">
+              <label>OG</label>
+              <input type="text" class="form-control  form-control-sm" formControlName="vslog"  aria-describedby="basic-addon1">
+
+            </div>
+
+            <div class="col-4">
+              <label>OD</label>
+              <input type="text" class="form-control  form-control-sm" formControlName="vslod"  aria-describedby="basic-addon1">
+
+            </div>
+
+            <div class="col-4">
+              <label>TV</label>
+              <input type="text" class="form-control  form-control-sm" formControlName="tvl"   aria-describedby="basic-addon1">
+
+            </div>
+        
+
+          
+            <legend>Vision de pris</legend> 
+
+            <div class="col-4">
+              <label>OG</label>
+              <input type="text" class="form-control  form-control-sm" formControlName="vspog"   aria-describedby="basic-addon1">
+
+            </div>
+
+            <div class="col-4">
+              <label>OD</label>
+              <input type="text" class="form-control  form-control-sm" formControlName="vspod"  aria-describedby="basic-addon1">
+
+            </div>
+
+            <div class="col-4">
+              <label>TV</label>
+              <input type="text" class="form-control  form-control-sm" formControlName="tvp"  aria-describedby="basic-addon1">
+            </div>
+           
+
+        
+
+          <legend>Lentilles de contacte</legend> 
+
+              <div class=" col-4">
+                <label>OG</label>
+                <input type="text" class="form-control  form-control-sm" formControlName="tlog"  aria-describedby="basic-addon1">
+  
+              </div>
+
+              <div class=" col-4">
+                <label>OD</label>
+                <input type="text" class="form-control  form-control-sm" formControlName="tlod"  aria-describedby="basic-addon1">
+  
+              </div>
+
+              <div class=" col-4">
+                <label>Type du lentille</label>
+                <input type="text" class="form-control  form-control-sm" formControlName="tl"  aria-describedby="basic-addon1">
+             </div>
+
+            <div class="row-auto">
+             <legend>Observation</legend> 
+
+                <div class="col-auto">
+                  
+                    <textarea class="form-control   form-control-sm" formControlName="obs" aria-label="With textarea"></textarea>
+                  </div>
+    
+                
+
+            <legend>Diamètre</legend> 
+
+                <div class="col-auto">
+                  
+                  <input type="text" class="form-control  form-control-sm" formControlName="diametre"  aria-describedby="basic-addon1">
+    
+                </div>
+              </div>
+            </fieldset>     
+            
+          </form>
+      
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary" (click)="Add()">Ajouter+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal0" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 10L4 16V20H8L14 14M10 10L13 7L17 11L14 14M10 10L14 14M14 20H20V4H4V10" stroke="#16147b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></h1>
+ 
+      </div>
+      <div class="modal-body">
+        <form  class="row g-4 " style="line-height: 1em;" [formGroup]="formValue">
+          <fieldset class="row g-1">
+            <legend>Information pérsonnelle</legend> 
+          <div class="col-auto">
+            <label>Nom:</label>
+            <input type="text" class="form-control  form-control-sm" formControlName="nom" aria-describedby="basic-addon1">
+          </div>
+
+          <div class="col-auto">
+            <label>Prénom:</label>
+            <input type="text" class="form-control  form-control-sm" formControlName="prenom"   aria-describedby="basic-addon1">
+          </div>
+
+          <div class="col-auto">
+            <label>N° Téléphone:</label>
+            <input type="tel" class="form-control  form-control-sm" formControlName="nt"   aria-describedby="basic-addon1">
+
+          </div>
+
+          <div class="col-auto">
+            <label>Age:</label>
+            <input type="number" class="form-control  form-control-sm" formControlName="age"  aria-describedby="basic-addon1">
+
+          </div>
+
+          <div class="col-4">
+            <label>Date:</label>
+            <input type="date" class="form-control  form-control-sm" formControlName="date"  aria-describedby="basic-addon1">
+
+          </div>
+        
+        
+          
+          <legend>Vision de loin </legend> 
+         
+
+          <div class="col-4">
+            <label>OG</label>
+            <input type="text" class="form-control  form-control-sm" formControlName="vslog"  aria-describedby="basic-addon1">
+
+          </div>
+
+          <div class="col-4">
+            <label>OD</label>
+            <input type="text" class="form-control  form-control-sm" formControlName="vslod"  aria-describedby="basic-addon1">
+
+          </div>
+
+          <div class="col-4">
+            <label>TV</label>
+            <input type="text" class="form-control  form-control-sm" formControlName="tvl"   aria-describedby="basic-addon1">
+
+          </div>
+      
+
+        
+          <legend>Vision de pris</legend> 
+
+          <div class="col-4">
+            <label>OG</label>
+            <input type="text" class="form-control  form-control-sm" formControlName="vspog"   aria-describedby="basic-addon1">
+
+          </div>
+
+          <div class="col-4">
+            <label>OD</label>
+            <input type="text" class="form-control  form-control-sm" formControlName="vspod"  aria-describedby="basic-addon1">
+
+          </div>
+
+          <div class="col-4">
+            <label>TV</label>
+            <input type="text" class="form-control  form-control-sm" formControlName="tvp"  aria-describedby="basic-addon1">
+          </div>
+         
+
+      
+
+        <legend>Lentilles de contacte</legend> 
+
+            <div class=" col-4">
+              <label>OG</label>
+              <input type="text" class="form-control  form-control-sm" formControlName="tlog"  aria-describedby="basic-addon1">
+
+            </div>
+
+            <div class=" col-4">
+              <label>OD</label>
+              <input type="text" class="form-control  form-control-sm" formControlName="tlod"  aria-describedby="basic-addon1">
+
+            </div>
+
+            <div class=" col-4">
+              <label>Type du lentille</label>
+              <input type="text" class="form-control  form-control-sm" formControlName="tl"  aria-describedby="basic-addon1">
+           </div>
+
+          <div class="row-auto">
+           <legend>Observation</legend> 
+
+              <div class="col-auto">
+                
+                  <textarea class="form-control   form-control-sm" formControlName="obs" aria-label="With textarea"></textarea>
+                </div>
+  
+              
+
+          <legend>Diamètre</legend> 
+
+              <div class="col-auto">
+                
+                <input type="text" class="form-control  form-control-sm" formControlName="diametre"  aria-describedby="basic-addon1">
+  
+              </div>
+            </div>
+          </fieldset>     
+          
+        </form>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        <button type="button" class="btn btn-primary" (click)="Update()">Modifier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModalG" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">{{data?.Nom}} {{data?.Prenom}}</h1>
+        
+      </div>
+     
+      <div class="modal-body" style="display: none;" id="print-section">
+        
+        <form  class="row g-4" >
+          
+            
+            <img style="   width: 200px;height: 200px;border-radius: 50%;display:inline;" src="../../assets/image/Capturedd.jpg">
+    
+            <h1 *ngFor="let b of d" style="color: rgb(37, 28, 28);margin-left: 7%;margin-top: 10px;"> {{b.name}}</h1> 
+            <h3><svg width="24px" height="24px" viewBox="0 0 512 512" id="Layer_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#FDD267;} .st1{fill:#FFFFFF;} .st2{fill:#EDEDED;} .st3{fill:#FDDD8D;} .st4{fill:#FEE8B3;} .st5{fill:#F7B93C;} .st6{fill:#333333;} </style> <g> <path class="st0" d="M501.1,222.2C491.8,229.5,260.7,411,256,414.7c3,2.3-40-31.5-245.1-192.5C11.3,221.8,246,7.6,245.5,8 c5.9-5.4,15-5.4,21,0C262.6,4.4,326.7,63,501.1,222.2z"></path> <path class="st1" d="M468.2,60.9V248l-192,150.8h-40.3L43.8,248V60.9c0-8.6,7-15.6,15.6-15.6h393.3 C461.2,45.3,468.2,52.3,468.2,60.9z"></path> <path class="st2" d="M468.2,60.9V248l-192,150.8h-40.3l-1.2-1L425.4,248V60.9c0-8.6-7-15.6-15.6-15.6h42.8 C461.2,45.3,468.2,52.3,468.2,60.9z"></path> <path class="st3" d="M501.1,222.2v262.2c0,6.5-2.6,12.4-6.9,16.7c-4.3,4.3-10.2,7-16.7,7h-443c-6.5,0-12.4-2.7-16.7-7 s-6.9-10.1-6.9-16.7V222.2l159.4,125.2l85.7,67.3l85.7-67.3L501.1,222.2z"></path> <path class="st4" d="M62.4,508.1H34.5c-6.5,0-12.4-2.7-16.7-7s-6.9-10.1-6.9-16.7V222.2l27.8,21.9v240.3c0,6.5,2.6,12.4,6.9,16.7 C49.9,505.4,55.8,508.1,62.4,508.1z"></path> <path class="st0" d="M501.1,222.2v262.2c0,6.5-2.6,12.4-6.9,16.7c-4.3,4.3-10.2,7-16.7,7h-42.8c6.5,0,12.5-2.7,16.7-7 c4.3-4.3,6.9-10.1,6.9-16.7V255.8L501.1,222.2z"></path> <path class="st0" d="M295.4,310.7h-78.7c-6.3,0-12.3,2.5-16.8,7c-66,66.5-181.6,183-182.1,183.5c4.3,4.3,10.2,7,16.7,7h443 c6.5,0,12.5-2.7,16.7-7c-108.2-109-93.2-94-182.1-183.4C307.7,313.2,301.7,310.7,295.4,310.7z"></path> <path class="st3" d="M225.9,317.6c-66,66.5-181.6,183-182.1,183.5c4.3,4.3,10.2,7,16.7,7h-26c-6.5,0-12.4-2.7-16.7-7 c0.5-0.5,116.1-116.9,182.1-183.5c4.5-4.5,10.5-7,16.8-7h26C236.4,310.7,230.4,313.2,225.9,317.6z"></path> <path class="st5" d="M494.2,501.1c-4.3,4.3-10.2,7-16.7,7h-42.8c6.5,0,12.5-2.7,16.7-7c-108.2-109-93.2-93.9-182-183.4 c-4.5-4.5-10.5-7-16.8-7h42.8c6.3,0,12.4,2.6,16.8,7C401,407.1,386,392.1,494.2,501.1z"></path> <g> <path class="st6" d="M505,222.2c0-1.1-0.6-2.3-1.3-2.9l-31.6-28.9V60.9c0-10.8-8.7-19.5-19.5-19.5H308.9l-38-34.8 c-10.9-10-21.2-7.8-30.6,0.8l-37.1,33.9H59.4c-10.8,0-19.5,8.7-19.5,19.5v129.5c-19.1,17.4-31.5,28.8-31.6,28.9 c-0.7,0.6-1.3,1.9-1.3,2.9v262.2C7,499.8,19.5,512,34.5,512h443c15.2,0,27.6-12.4,27.6-27.6V222.2H505z M497.2,484.4 c0,3.9-1.1,7.6-3.2,10.8L347.6,347.8l149.6-117.4V484.4z M495,222c-4.4,3.5-12.4,9.8-22.9,18v-38.9L495,222z M248.2,10.9 c4.5-4.1,11.2-4.1,15.7,0L264,11c1.7,1.5,12.2,11.1,33.3,30.4h-82.5C234.8,23,248,11,248.2,10.9z M47.7,60.9 c0-6.4,5.2-11.6,11.6-11.6h393.3c6.4,0,11.6,5.2,11.6,11.6c0,25,0,185.8,0,185.3l-122.3,96l-27-27.2c-5.2-5.2-12.3-8.2-19.6-8.2 h-78.7c-7.4,0-14.3,2.9-19.6,8.1l-27,27.2l-122.3-96C47.7,246.1,47.7,60.9,47.7,60.9z M14.8,484.4V230.3l149.6,117.4L18.1,495.2 C16,492,14.8,488.3,14.8,484.4z M39.9,201.1V240L17,222C21.2,218.1,29.3,210.7,39.9,201.1z M34.5,504.1c-3.6,0-7.8-1.2-10.9-3.3 l179.1-180.4c3.7-3.7,8.7-5.8,14-5.8h78.7c5.2,0,10.3,2.1,14,5.8l179,180.4c-2.9,1.9-7.1,3.3-10.9,3.3H34.5z"></path> <path class="st6" d="M413.4,245.3c2.2,0,3.9-1.8,3.9-3.9c0-2.2-1.8-3.9-3.9-3.9H98.6c-2.2,0-3.9,1.8-3.9,3.9 c0,2.2,1.8,3.9,3.9,3.9H413.4z"></path> <path class="st6" d="M98.6,199.9h314.8c2.2,0,3.9-1.8,3.9-3.9c0-2.2-1.8-3.9-3.9-3.9H98.6c-2.2,0-3.9,1.8-3.9,3.9 C94.7,198.1,96.4,199.9,98.6,199.9z"></path> <path class="st6" d="M413.4,154.4c2.2,0,3.9-1.8,3.9-3.9c0-2.2-1.8-3.9-3.9-3.9H98.6c-2.2,0-3.9,1.8-3.9,3.9 c0,2.2,1.8,3.9,3.9,3.9H413.4z"></path> <path class="st6" d="M98.6,109h314.8c2.2,0,3.9-1.8,3.9-3.9c0-2.2-1.8-3.9-3.9-3.9H98.6c-2.2,0-3.9,1.8-3.9,3.9 C94.7,107.2,96.4,109,98.6,109z"></path> </g> </g> </g></svg> Optica@gmail.com</h3>
+            <h3><svg width="24px" height="24px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Home"></g> <g id="Print"></g> <g id="Mail"></g> <g id="Camera"></g> <g id="Video"></g> <g id="Film"></g> <g id="Message"></g> <g id="Telephone"> <path d="M30,22.3l-2.5-2.5c-1.3-1.3-3.5-1.3-4.8,0l-0.8,0.8c-0.5,0.5-1.4,0.5-2,0l-4.2-4.2l-4.2-4.2 c-0.3-0.3-0.4-0.6-0.4-1s0.1-0.7,0.4-1l0.9-0.8c1.3-1.3,1.3-3.5,0-4.8L9.7,2C8.5,0.7,6.2,0.7,4.9,2L4.1,2.8c-2,2-3.1,4.6-3.1,7.5 s1.1,5.5,3.1,7.5l5.1,5.1l5.1,5.1c2,2,4.7,3.1,7.5,3.1s5.5-1.1,7.5-3.1l0.9-0.8c0.6-0.6,1-1.5,1-2.4C31,23.8,30.7,22.9,30,22.3z" fill="#0e127b"></path> <g> <path d="M16,5c-0.5,0-1,0.5-1,1s0.5,1,1,1c2.5,0,4.7,1,6.4,2.6C24,11.3,25,13.5,25,16c0,0.5,0.5,1,1,1s1-0.5,1-1 c0-3-1.2-5.8-3.2-7.8C21.8,6.2,19,5,16,5z" fill="#928d87"></path> <path d="M27.8,4.2C25.8,2.2,23,1,20,1c-0.5,0-1,0.5-1,1s0.5,1,1,1c2.5,0,4.7,1,6.4,2.6C28,7.3,29,9.5,29,12 c0,0.5,0.5,1,1,1s1-0.5,1-1C31,9,29.8,6.2,27.8,4.2z" fill="#928d87"></path> </g> </g> <g id="User"></g> <g id="File"></g> <g id="Folder"></g> <g id="Map"></g> <g id="Download"></g> <g id="Upload"></g> <g id="Video_Recorder"></g> <g id="Schedule"></g> <g id="Cart"></g> <g id="Setting"></g> <g id="Search"></g> <g id="Pencils"></g> <g id="Group"></g> <g id="Record"></g> <g id="Headphone"></g> <g id="Music_Player"></g> <g id="Sound_On"></g> <g id="Sound_Off"></g> <g id="Lock"></g> <g id="Lock_open"></g> <g id="Love"></g> <g id="Favorite"></g> <g id="Film_1_"></g> <g id="Music"></g> <g id="Puzzle"></g> <g id="Turn_Off"></g> <g id="Book"></g> <g id="Save"></g> <g id="Reload"></g> <g id="Trash"></g> <g id="Tag"></g> <g id="Link"></g> <g id="Like"></g> <g id="Bad"></g> <g id="Gallery"></g> <g id="Add"></g> <g id="Close"></g> <g id="Forward"></g> <g id="Back"></g> <g id="Buy"></g> <g id="Mac"></g> <g id="Laptop"></g> </g></svg> +21629888121 </h3>
+           
+            <div style="color: rgb(14, 15, 75);float: right;margin-top: -350px;">
+            <h1>أخصائي في فحص و قياس النظر</h1>
+            <hr>
+            <h3 style="margin-left: 25%;"  *ngFor="let b of d" >{{b.adresse}} <svg  width="24px" height="24px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect> <path d="M24 44C24 44 39 32 39 19C39 10.7157 32.2843 4 24 4C15.7157 4 9 10.7157 9 19C9 32 24 44 24 44Z" fill="#2F88FF" stroke="#000000" stroke-width="4" stroke-linejoin="round"></path> <path d="M24 25C27.3137 25 30 22.3137 30 19C30 15.6863 27.3137 13 24 13C20.6863 13 18 15.6863 18 19C18 22.3137 20.6863 25 24 25Z" fill="#43CCF8" stroke="white" stroke-width="4" stroke-linejoin="round"></path> </g></svg></h3>
+            </div>
+            <fieldset class="row g-1">
+            <legend style="font-weight: bolder;">ORDONNACE DU LUNETTE</legend>
+           
+           
+           <p><b>Nom:</b> {{data?.Nom}}</p>
+           <p><b>Prénom: </b> {{data?.Prenom}}</p>
+           <p><b>Age:</b> {{data?.Age}}</p>
+           <p><b>Téléphone:</b> {{data?.Nt}} </p>
+           <p><b>Date:</b> {{data?.Date}}</p>
+           <p><b>Vision de loin (OD):</b> {{data?.Vslod}}</p>
+           <p><b>Vision de loin (OG):</b> {{data?.Vslog}}</p>
+           <p><b>Vision de loin (TV):</b> {{data?.Tvl}}</p>
+           <p><b>Vision de pris (OD):</b> {{data?.Vspod}}</p>
+           <p><b>Vision de pris (OG):</b> {{data?.Vspog}}</p>
+           <p><b>Vision de pris (TV):</b> {{data?.Tvp}}</p>
+           <p><b>Lentilles de contacte (OG):</b> {{data?.Tlog}}</p>
+           <p><b>Lentilles de contacte (OD):</b> {{data?.Tlod}}</p>
+           <p><b>Lentilles de contacte (Type du lentille):</b> {{data?.Tl}}</p>
+           <p><b>Observation:</b> {{data?.Obs}}</p>
+           <p><b>Diamètre:</b> {{data?.Diametre}}</p> 
+     
+          </fieldset>     
+          
+        </form>
+         <p style="float: right;">Signature</p>
+      </div>
+      <div class="modal-footer">
+        <button mat-raised-button color="warn" printSectionId="print-section"  ngxPrint >Imprimer</button>
+        <button  style="margin-right: 17%;"  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModalV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h1 class="modal-title fs-5"><svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12.864 7.37071C13.6338 8.8447 14.0238 10.4874 13.9989 12.1501C13.9739 13.8128 13.5347 15.4431 12.721 16.8933L4 12L12.864 7.37071Z" fill="#000000" fill-opacity="0.24"></path> <path d="M14.5 5.5C11.7189 9.20812 4.64088 11.6272 3.62274 11.9605C3.57878 11.9748 3.57584 12.0335 3.61809 12.0523C4.61914 12.4983 11.7146 15.7146 14.5 18.5" stroke="#0e0c64" stroke-linecap="round"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5498 9.03334C13.862 10.0385 14.0148 11.0902 13.9989 12.1501C13.9845 13.1091 13.8323 14.0572 13.5499 14.9663C12.1066 14.7491 11 13.5037 11 11.9998C11 10.4959 12.1065 9.25054 13.5498 9.03334Z" fill="#0e0c64"></path> <path d="M16.5 12H20.5" stroke="#000000" stroke-opacity="0.24" stroke-linecap="round"></path> <path d="M16.5 9.5L20.5 8" stroke="#000000" stroke-opacity="0.24" stroke-linecap="round"></path> <path d="M16.5 14.5L20.5 16" stroke="#000000" stroke-opacity="0.24" stroke-linecap="round"></path> </g></svg></h1>
+        
+      </div>
+     
+      <div class="modal-body" id="print-section">
+        
+        <form  class="row g-4 ">
+          <fieldset class="row g-1" style="line-height: 0.5em;margin-top: 20px;">
+             
+         
+            
+            <p><b>Nom:</b> {{data?.Nom}}</p>
+            <p><b>Prénom: </b> {{data?.Prenom}}</p>
+            <p><b>Age:</b> {{data?.Age}}</p>
+            <p><b>Téléphone:</b> {{data?.Nt}} </p>
+            <p><b>Date de naissance:</b> {{data?.Date}}</p>
+            <p><b>Vision de loin (OD):</b> {{data?.Vslod}}</p>
+            <p><b>Vision de loin (OG):</b> {{data?.Vslog}}</p>
+            <p><b>Vision de loin (TV):</b> {{data?.Tvl}}</p>
+            <p><b>Vision de pris (OD):</b> {{data?.Vspod}}</p>
+            <p><b>Vision de pris (OG):</b> {{data?.Vspog}}</p>
+            <p><b>Vision de pris (TV):</b> {{data?.Tvp}}</p>
+            <p><b>Lentilles de contacte (OG):</b> {{data?.Tlog}}</p>
+            <p><b>Lentilles de contacte (OD):</b> {{data?.Tlod}}</p>
+            <p><b>Lentilles de contacte (Type du lentille):</b> {{data?.Tl}}</p>
+            <p><b>Observation:</b> {{data?.Obs}}</p>
+            <p><b>Diamètre:</b> {{data?.Diametre}}</p> 
+     
+          </fieldset>     
+          
+        </form>
+    
+      </div>
+      <div class="modal-footer">
+       
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background-color: rgb(6, 6, 75);color: white;">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Clients</h1>
+     
+      </div>
+      <div class="modal-body">
+        <form *ngFor="let a of data">
+            <p>{{a.Nom}}  {{a.Prenom}}</p>
+        </form>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color: rgb(6, 6, 75);color: white;">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Information</h1>
+          
+          </div>
+          <div class="modal-body"  *ngFor="let b of d">
+            <p>Nom Société: {{b.name}}</p>
+         
+           <p>Adresse: {{b.adresse}}</p> 
+         
+            <button style="margin-top: 10px;" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"  type="button" class="btn btn-primary d-grid gap-2 col-6 mx-auto" (click)="Edituser(b)">Modifier</button>
+
+          </div>
+
+          <div style="background-color: rgb(50, 49, 57);margin-top: 20px;border-radius: 1.3em;padding-left: 10px;">
+            <h1>About</h1>
+            <p style="text-align: center;">لتسيير محلات النظارة و ترتيب الزبائن مع طبع الفواتير و كذلك امكانية استخراج البيانات على شكل ملف اكسل</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2"><svg width="64px" height="64px" viewBox="0 0 128 128" id="Слой_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#FFE0B2;} .st1{fill:#424242;} .st2{fill:#90CAF9;} .st3{fill:#FFFFFF;} </style> <g> <g> <circle class="st0" cx="64" cy="33" r="31"></circle> <path class="st1" d="M64,66c-18.2,0-33-14.8-33-33S45.8,0,64,0s33,14.8,33,33S82.2,66,64,66z M64,4C48,4,35,17,35,33s13,29,29,29 s29-13,29-29S80,4,64,4z"></path> </g> <path class="st2" d="M126,126c0-34.2-27.8-62-62-62S2,91.8,2,126H126z"></path> <path class="st1" d="M126,128H2c-1.1,0-2-0.9-2-2c0-25.9,15.5-48.3,37.7-58.3c8-3.6,17-5.7,26.3-5.7c6.6,0,13,1,19,2.9 c26,8.1,45,32.4,45,61.1C128,127.1,127.1,128,126,128z M4,124h60h60c-0.6-19.4-10.5-36.4-25.3-46.9c-6.1-4.4-13.1-7.6-20.6-9.4 C73.5,66.6,68.8,66,64,66c-5.9,0-11.6,0.9-17,2.4c-5,1.5-9.7,3.6-14,6.2C16.2,84.8,4.7,103.1,4,124z"></path> </g> <path class="st3" d="M56,127"></path> </g></svg></h1>
+          
+          </div>
+          <div class="modal-body">
+            <form   [formGroup]="formValueA">
+              <div class="row-auto">
+                <label>Nom Société</label>
+                <input type="text"  class="form-control  form-control-sm" formControlName="name"  aria-describedby="basic-addon1">
+             </div>
+             <div class="row-auto">
+              <label>Adresse</label>
+              <input type="text" class="form-control  form-control-sm" formControlName="adresse"  aria-describedby="basic-addon1">
+            </div>
+          
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            <button class="btn btn-primary"  (click)="UpdateUser()" >Appliquer</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+         
+
+
+  
+</body>
+</html>
